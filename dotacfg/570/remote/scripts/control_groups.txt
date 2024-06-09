@@ -1,0 +1,228 @@
+"ControlGroups"
+{
+	"npc_dota_hero_beastmaster"
+	{
+		"1"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_beastmaster_boar_4"
+				"unitlabel"		"boar"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+		}
+		"3"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_beastmaster_boar_4"
+				"unitlabel"		"boar"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+		}
+		"0"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_beastmaster_boar_1"
+				"unitlabel"		"boar"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+		}
+		"2"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_necronomicon_archer_3"
+				"unitlabel"		"necroarcher"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+			"1"
+			{
+				"unitname"		"npc_dota_necronomicon_warrior_3"
+				"unitlabel"		"necrowarrior"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+		}
+	}
+	"npc_dota_hero_enigma"
+	{
+		"0"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_lesser_eidolon"
+				"unitlabel"		"eidolons"
+				"illusion"		"0"
+				"unitindex"		"1"
+			}
+			"1"
+			{
+				"unitname"		"npc_dota_lesser_eidolon"
+				"unitlabel"		"eidolons"
+				"illusion"		"0"
+				"unitindex"		"2"
+			}
+			"2"
+			{
+				"unitname"		"npc_dota_lesser_eidolon"
+				"unitlabel"		"eidolons"
+				"illusion"		"0"
+				"unitindex"		"3"
+			}
+		}
+	}
+	"npc_dota_hero_life_stealer"
+	{
+		"2"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_creature_jungle_spirit"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+		}
+	}
+	"npc_dota_hero_lycan"
+	{
+		"0"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_lycan_wolf1"
+				"unitlabel"		"lycan_wolf"
+				"illusion"		"0"
+				"unitindex"		"1"
+			}
+			"1"
+			{
+				"unitname"		"npc_dota_lycan_wolf1"
+				"unitlabel"		"lycan_wolf"
+				"illusion"		"0"
+				"unitindex"		"2"
+			}
+		}
+		"2"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_creep_badguys_melee"
+				"unitlabel"		"helm_of_the_dominator_neutral"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+		}
+		"1"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_necronomicon_archer_3"
+				"unitlabel"		"necroarcher"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+			"1"
+			{
+				"unitname"		"npc_dota_necronomicon_warrior_3"
+				"unitlabel"		"necrowarrior"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+		}
+		"3"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_necronomicon_archer_3"
+				"unitlabel"		"necroarcher"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+			"1"
+			{
+				"unitname"		"npc_dota_necronomicon_warrior_3"
+				"unitlabel"		"necrowarrior"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+		}
+		"4"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_creep_badguys_melee"
+				"unitlabel"		"helm_of_the_dominator_neutral"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+		}
+	}
+	"npc_dota_hero_naga_siren"
+	{
+		"3"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_hero_naga_siren"
+				"illusion"		"1"
+				"illusionlabel"		"illusion_0"
+				"unitindex"		"0"
+			}
+			"1"
+			{
+				"unitname"		"npc_dota_hero_naga_siren"
+				"illusion"		"1"
+				"illusionlabel"		"illusion_1"
+				"unitindex"		"0"
+			}
+		}
+	}
+	"npc_dota_hero_juggernaut"
+	{
+		"0"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_hero_juggernaut"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+		}
+	}
+	"npc_dota_hero_terrorblade"
+	{
+		"1"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_hero_terrorblade"
+				"illusion"		"1"
+				"illusionlabel"		"manta_0"
+				"unitindex"		"0"
+			}
+			"1"
+			{
+				"unitname"		"npc_dota_hero_terrorblade"
+				"illusion"		"1"
+				"illusionlabel"		"manta_1"
+				"unitindex"		"0"
+			}
+		}
+		"2"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_hero_terrorblade"
+				"illusion"		"1"
+				"illusionlabel"		"conjure_image_0"
+				"unitindex"		"0"
+			}
+		}
+	}
+}

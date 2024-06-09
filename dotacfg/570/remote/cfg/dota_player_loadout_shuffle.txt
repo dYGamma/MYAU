@@ -1,0 +1,55 @@
+"PlayerLoadoutShuffle"
+{
+	"announcer"
+	{
+		"0"		"0x00000001982C1E91"
+	}
+	"mega_kills"
+	{
+		"0"		"0x0000000411F645A4"
+	}
+	"courier"
+	{
+		"0"		"0x00000001839FFDC4"
+	}
+	"music"
+	{
+		"0"		"0x00000003B725CD56"
+	}
+	"ward"
+	{
+		"0"		"0x00000001785DD2AD"
+	}
+	"heroic_statue"
+	{
+		"0"		"0x00000003A579087C"
+	}
+	"cursor_pack"
+	{
+		"0"		"0x00000003B725CD60"
+	}
+	"terrain"
+	{
+		"0"		"0x0000000427BB3B4E"
+	}
+	"radiant_towers"
+	{
+		"0"		"0x000000061A563C3D"
+	}
+	"dire_towers"
+	{
+		"0"		"0x000000061A563C5D"
+	}
+	"versus_screen"
+	{
+		"0"		"0x0000000411F60B92"
+	}
+	"streak_effect"
+	{
+		"0"		"0x00000006AE528685"
+	}
+	"roshan"
+	{
+		"0"		"0x00000005FF99244D"
+	}
+}

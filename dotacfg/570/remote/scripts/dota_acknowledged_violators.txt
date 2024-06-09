@@ -1,0 +1,13 @@
+"AcknowledgedViolators"
+{
+	"store_tab_violator"		"1"
+	"armory_button_violator"		"1"
+	"per_hero_stats_violator"		"1"
+	"store_browse_violator"		"1"
+	"store_browse_new_tab"		"1"
+	"profile_hero_stats_violator"		"1"
+	"notifications_button_violator"		"1"
+	"trainer_violator"		"1"
+	"guilds_violator"		"1"
+	"sticker_violator"		"1"
+}
