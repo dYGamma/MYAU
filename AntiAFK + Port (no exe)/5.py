@@ -188,26 +188,26 @@ status_label.pack(pady=10)
 video_label = tk.Label(root)
 video_label.pack(pady=10)
 
-# video_path = resource_path('gul.mp4')
-# cap = cv2.VideoCapture(video_path)
+video_path = resource_path('gul.mp4')
+cap = cv2.VideoCapture(video_path)
 
-# if not cap.isOpened():
-#     print("Ошибка: Не удалось открыть видеофайл.")
-#     sys.exit()
+if not cap.isOpened():
+    print("Ошибка: Не удалось открыть видеофайл.")
+    sys.exit()
 
-# fps = cap.get(cv2.CAP_PROP_FPS)
-# if fps == 0:
-#     print("Ошибка: FPS равен нулю. Проверьте видеофайл.")
-#     sys.exit()
+fps = cap.get(cv2.CAP_PROP_FPS)
+if fps == 0:
+    print("Ошибка: FPS равен нулю. Проверьте видеофайл.")
+    sys.exit()
 
 speed_up_factor = 5.0
-# frame_interval = int(1000 / (fps * speed_up_factor))
+frame_interval = int(1000 / (fps * speed_up_factor))
 
-# print(f"FPS: {fps}")
-# print(f"Frame interval: {frame_interval}")
+print(f"FPS: {fps}")
+print(f"Frame interval: {frame_interval}")
 
 update_video_frame()
 
 root.mainloop()
 
-# cap.release()
+cap.release()
