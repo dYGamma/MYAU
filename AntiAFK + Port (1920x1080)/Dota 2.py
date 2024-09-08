@@ -158,7 +158,7 @@ def create_button(frame, text, command, width, height):
     return button
 
 root = tk.Tk()
-root.title("Управлялка ДуДимы")
+root.title("")
 root.configure(bg="#1E1E1E")
 root.resizable(False, False)
 
