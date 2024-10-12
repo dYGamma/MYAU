@@ -22,6 +22,7 @@ hold_time = 5.0
 pause_time = 2.5
 
 is_moving = False
+spin_interval = 4 * 60 * 60  # default 4 hours
 
 directions = [
     ('w', 'ц'),
@@ -30,11 +31,48 @@ directions = [
     ('a', 'ф')
 ]
 
+def spin_wheel():
+    global spin_interval
+    print("Скрипт начнет работу через 5 секунд...")
+    time.sleep(5)
+    
+    while is_moving:
+        pyautogui.press('up')
+        time.sleep(1)
+        
+        pyautogui.moveTo(1832, 993, duration=1)
+        pyautogui.click()
+        time.sleep(1)
+
+        pyautogui.moveTo(960, 450, duration=1)
+        pyautogui.click()
+        time.sleep(2)
+
+        pyautogui.moveTo(645, 497, duration=1)
+        pyautogui.click()
+        time.sleep(2)
+
+        pyautogui.moveTo(959, 901, duration=1)
+        pyautogui.click()
+        time.sleep(5)  
+
+        pyautogui.press('esc')
+        time.sleep(1)
+
+        for _ in range(10):  
+            pyautogui.press('w')
+            time.sleep(1)
+        
+        print(f"Колесо прокручено, ожидание {spin_interval} секунд до следующего вращения.")
+        time.sleep(spin_interval)
+
 def move_in_square():
     global is_moving
     is_moving = True
     status_label.config(text="Статус: Работает", fg="lightgreen")
     print("Начинаю движение. Нажмите 'Стоп' для остановки.")
+
+    threading.Thread(target=spin_wheel, daemon=True).start()
     
     while is_moving:
         for key_en, key_ru in directions:
@@ -109,7 +147,6 @@ def stop_script():
     global running
     running = False
     status_label_port.config(text="Статус скрипта: Остановлено", fg="lightcoral")
-    
 
 def update_video_frame():
     global cap, video_label, video_label_port, frame_interval
@@ -130,10 +167,10 @@ def update_video_frame():
         video_label_port.config(image=photo)
         video_label_port.image = photo
         
-        root.after(frame_interval, update_video_frame)
+        root.after(10, update_video_frame)
     else:
         cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
-        root.after(frame_interval, update_video_frame)
+        root.after(10, update_video_frame)
 
 def show_frame(frame):
     for widget in root.winfo_children():
@@ -157,12 +194,45 @@ def create_button(frame, text, command, width, height):
     button.bind("<Leave>", on_leave)
     return button
 
+def apply_time_settings():
+    global spin_interval
+    try:
+        hours = int(hours_entry.get())
+        minutes = int(minutes_entry.get())
+        seconds = int(seconds_entry.get())
+        spin_interval = hours * 3600 + minutes * 60 + seconds
+        print(f"Интервал прокрутки колеса установлен на {hours} часов {minutes} минут {seconds} секунд.")
+        error_label.config(text=f"Время установлено на:\n{hours} ч. {minutes} мин. {seconds} сек.", fg="lightgreen")
+        
+    except ValueError:
+        error_label.config(text="Ошибка:\nВремя некорректно", fg="lightcoral")
+        print("Ошибка: время некорректно.")
+
+def growing_circle(label):
+    size = 1
+    max_size = 10
+    growing = True
+    while True:
+        if growing:
+            size += 1
+            if size >= max_size:
+                growing = False
+        else:
+            size -= 1
+            if size <= 1:
+                growing = True
+        
+        circle = 'o' * size
+        label.config(text=circle)
+        root.update_idletasks()
+        time.sleep(0.2)
+
 root = tk.Tk()
 root.title("")
 root.configure(bg="#1E1E1E")
 root.resizable(False, False)
 
-root.geometry(f"304x550+{(root.winfo_screenwidth() - 304) // 2}+{(root.winfo_screenheight() - 550) // 2}")
+root.geometry(f"304x795+{(root.winfo_screenwidth() - 304) // 2}+{(root.winfo_screenheight() - 795) // 2}")
 
 frame1 = tk.Frame(root, bg="#1E1E1E")
 frame2 = tk.Frame(root, bg="#1E1E1E")
@@ -197,8 +267,50 @@ stop_button_port.pack(pady=10)
 status_label_port = tk.Label(frame2, text="Статус скрипта: Остановлено", font=("Helvetica", 12), fg="lightcoral", bg="#1E1E1E")
 status_label_port.pack(pady=10)
 
+settings_label = tk.Label(frame1, text="Настройки времени:", font=("Helvetica", 12), fg="lightgrey", bg="#1E1E1E")
+settings_label.pack(pady=10)
+
+time_frame = tk.Frame(frame1, bg="#1E1E1E")
+time_frame.pack(pady=5)
+
+hours_label = tk.Label(time_frame, text="Ч:", font=("Helvetica", 12), fg="lightgrey", bg="#1E1E1E")
+hours_label.pack(side="left", padx=5)
+
+hours_entry = tk.Entry(time_frame, width=5)
+hours_entry.pack(side="left", padx=5)
+
+minutes_label = tk.Label(time_frame, text="М:", font=("Helvetica", 12), fg="lightgrey", bg="#1E1E1E")
+minutes_label.pack(side="left", padx=5)
+
+minutes_entry = tk.Entry(time_frame, width=5)
+minutes_entry.pack(side="left", padx=5)
+
+seconds_label = tk.Label(time_frame, text="С:", font=("Helvetica", 12), fg="lightgrey", bg="#1E1E1E")
+seconds_label.pack(side="left", padx=5)
+
+seconds_entry = tk.Entry(time_frame, width=5)
+seconds_entry.pack(side="left", padx=5)
+
+apply_button = create_button(frame1, "Применить", apply_time_settings, 25, 2)
+apply_button.pack(pady=10)
+
+error_label = tk.Label(frame1, text="", font=("Helvetica", 12), fg="red", bg="#1E1E1E")
+error_label.pack(pady=5)
+
 video_label_port = tk.Label(frame2, bg="#1E1E1E")
 video_label_port.pack(pady=10)
+
+# Лейбл для анимации растущего круга (первая анимация)
+circle_label1 = tk.Label(frame2, text="", font=("Helvetica", 14), fg="lightgrey", bg="#1E1E1E")
+circle_label1.pack(pady=20)
+
+# Лейбл для версии приложения
+version_label = tk.Label(frame2, text="Версия: 1.1.0\nДата обновления: 15.09.2024", font=("Helvetica", 10), fg="lightgrey", bg="#1E1E1E")
+version_label.pack(pady=20)
+
+# Лейбл для второй анимации растущего круга
+circle_label2 = tk.Label(frame2, text="", font=("Helvetica", 14), fg="lightgrey", bg="#1E1E1E")
+circle_label2.pack(side="bottom", pady=10)
 
 show_frame(frame1)
 
@@ -221,6 +333,10 @@ print(f"FPS: {fps}")
 print(f"Frame interval: {frame_interval}")
 
 update_video_frame()
+
+# Запуск анимации в отдельных потоках
+threading.Thread(target=growing_circle, args=(circle_label1,), daemon=True).start()
+threading.Thread(target=growing_circle, args=(circle_label2,), daemon=True).start()
 
 root.mainloop()
 
