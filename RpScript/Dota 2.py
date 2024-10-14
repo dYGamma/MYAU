@@ -40,23 +40,29 @@ def spin_wheel():
         pyautogui.press('up')
         time.sleep(1)
         
-        pyautogui.moveTo(1832, 993, duration=1)
+        pyautogui.moveTo(1715, 911, duration=1)
         pyautogui.click()
         time.sleep(1)
 
-        pyautogui.moveTo(960, 450, duration=1)
+        pyautogui.moveTo(761, 653, duration=1)
         pyautogui.click()
         time.sleep(2)
 
-        pyautogui.moveTo(645, 497, duration=1)
-        pyautogui.click()
-        time.sleep(2)
+        # pyautogui.moveTo(645, 497, duration=1)
+        # pyautogui.click()
+        # time.sleep(2)
 
-        pyautogui.moveTo(951, 854, duration=1)
+        pyautogui.moveTo(955, 890, duration=1)
         pyautogui.click()
         time.sleep(5)  
 
         pyautogui.press('esc')
+        time.sleep(1)
+
+        pyautogui.press('esc')
+        time.sleep(1)
+
+        pyautogui.press('backspace')
         time.sleep(1)
 
         for _ in range(10):  
