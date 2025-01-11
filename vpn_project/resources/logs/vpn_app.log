@@ -1,0 +1,30 @@
+2025-01-11 21:34:16,189 - INFO - VPN connected.
+2025-01-11 21:34:46,152 - INFO - VPN disconnected.
+2025-01-11 21:34:47,898 - INFO - Logs viewed by the user.
+2025-01-11 21:55:55,549 - ERROR - Failed to connect VPN: Can't instantiate abstract class WireguardDevice with abstract methods get_config, set_config
+2025-01-11 22:00:11,584 - ERROR - Failed to connect VPN: 'MyWireguardDevice' object has no attribute 'name'
+2025-01-11 22:03:49,699 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:03:53,773 - INFO - VPN disconnected.
+2025-01-11 22:04:18,108 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:04:47,831 - INFO - VPN disconnected.
+2025-01-11 22:05:39,647 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:05:53,787 - INFO - VPN disconnected.
+2025-01-11 22:05:55,317 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:05:57,670 - INFO - VPN disconnected.
+2025-01-11 22:05:58,180 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:06:19,780 - INFO - VPN disconnected.
+2025-01-11 22:08:47,311 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:12:11,066 - INFO - VPN disconnected.
+2025-01-11 22:13:30,773 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:13:47,283 - INFO - VPN disconnected.
+2025-01-11 22:13:47,733 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:13:48,178 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:13:48,328 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:13:48,476 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:13:48,620 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:13:48,940 - INFO - VPN disconnected.
+2025-01-11 22:13:49,120 - INFO - VPN disconnected.
+2025-01-11 22:13:49,534 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:16:36,599 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
+2025-01-11 22:17:01,346 - INFO - VPN disconnected.
+2025-01-11 22:17:02,260 - INFO - VPN connected with config: D:\GIT\MYAU\vpn_project\resources\configs\my_vpn.conf
